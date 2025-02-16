@@ -55,7 +55,7 @@ factor urban_pop precip mean_elevation island landlocked rugged dist_coast cont_
 predict geo_index
 
 reg idv_construct ln_gdp geo_index
-outreg2 using "tables/table_02.doc", append
+outreg2 using "tables/table_02.doc", replace
 reg idv_construct ln_gdp geo_index gdp_urban_int
 outreg2 using "tables/table_02.doc", append
 
@@ -97,7 +97,7 @@ predict geo_index
 
 * baseline and interaction regressions for patent measure
 reg ln_patents ln_gdp geo_index
-outreg2 using "tables/table_02.doc", replace
+outreg2 using "tables/table_02.doc", append
 reg ln_patents ln_gdp geo_index gdp_urban_int
 outreg2 using "tables/table_02.doc", append
 
